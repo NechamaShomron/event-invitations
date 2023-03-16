@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Dropdown from './Dropdown';
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 import sharedStyles from "./Shared.module.css";
 
 const NavbarItems = ({ items }) => {
@@ -14,7 +14,7 @@ const NavbarItems = ({ items }) => {
                         onClick={() => setDropdown((prev) => !prev)}>
                         {items.title}{' '}
                     </button>
-                    <Dropdown submenus={items.submenu} dropdown={dropdown}
+                    <Dropdown submenus={items.submenu} dropdown={dropdown} changeDropdownStatus={() => setDropdown(false)}
                     />
                 </>
             ) : (
