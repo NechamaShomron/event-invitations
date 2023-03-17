@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import sharedStyles from "./Shared.module.css";
 import { navbarItemsList } from "./NavbarItemsList"
 import NavbarItems from './NavbarItems';
 import * as Icons from "react-icons/fa"
+import NavbarSharedStyles from "./NavbarShared.module.css";
+
 
 
 const Navbar = () => {
@@ -10,10 +11,10 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div className={`${sharedStyles.bars_menu} ${navbarOpen ? sharedStyles.active : ""}`} onClick={() => setNavbarOpen((prev) => !prev)}> <Icons.FaBars /> </div>
-      <ul className={`${sharedStyles.navbar_container} ${navbarOpen ? sharedStyles.active : sharedStyles.disabled}`}>
+      <div className={`${NavbarSharedStyles.bars_menu} ${navbarOpen ? NavbarSharedStyles.active : ""}`} onClick={() => setNavbarOpen((prev) => !prev)}> <Icons.FaBars /> </div>
+      <ul className={`${NavbarSharedStyles.navbar_container} ${navbarOpen ? NavbarSharedStyles.active : NavbarSharedStyles.disabled}`}>
         {navbarItemsList.map((navItem, index) => {
-          return <NavbarItems items={navItem} key={index} />;
+          return <NavbarItems items={navItem} key={index} close_menu={()=>setNavbarOpen(false)}/>;
         })}
       </ul>
     </nav>

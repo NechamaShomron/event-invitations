@@ -1,7 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root{
+  --blue-bg-color: aliceblue;
+  --blue-text-color: #4084c0;
+  --blue-text-bg:rgb(187, 202, 224);
+  --blue-dark: #0a378f;
+
+}
+
+
 *{
   margin:0;
   padding:0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
+}
+
+body{
+  overflow: hidden;
 }

@@ -1,0 +1,97 @@
+.page_container {
+    direction: rtl;
+    padding: 2rem 5rem;
+}
+
+.contact_conatiner {
+    padding: 7em 0;
+
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 0 11px 27px rgb(0 0 0 / 5%);
+
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.side_letter {
+    background-color: var(--blue-dark);
+    color: var(--blue-text-bg);
+}
+
+.form_message {
+    padding-top: 2em;
+}
+
+label {
+    margin-right: 3px;
+}
+
+.form_bttn_container {
+    padding-top: 2em;
+    margin-right: auto;
+    display: table;
+}
+
+.form_bttn {
+    width: 6rem;
+    background-color: var(--blue-dark);
+    color: var(--blue-text-bg);
+    border: none;
+    height: 2.8rem;
+    border-radius: 20%;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.form_bttn:hover {
+    transition: 1s ease-in-out;
+    background: #4F95DA;
+}
+
+.form_message_warning {
+    color: red;
+}
+
+.form_message_success{
+    color: #28a745;
+    font-size: 18px;
+    font-weight: bold; 
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    font-weight: bold;
+}

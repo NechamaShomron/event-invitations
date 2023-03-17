@@ -1,0 +1,17 @@
+.card_container{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding: 1rem;
+    cursor: pointer;
+    direction: rtl;
+    margin-top: 2%;
+    width: 17em;
+    margin-right: 2%;
+}
+.card_container:hover{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+}
+.text_container{
+    padding-top: 7px;
+    text-align: center;
+}

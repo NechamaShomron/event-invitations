@@ -43,8 +43,8 @@ button span {
 
 .navbar_items a:hover,
 .navbar_items button:hover {
-  background-color: rgb(232, 242, 238);
-  color: rgb(54, 161, 139);
+  background-color: var(--blue-text-bg);
+  color: var(--blue-text-color);
   font-weight: 400;
 }
 
@@ -88,8 +88,7 @@ button span {
     border-radius: 10px;
     text-align: center;
     transition: 0.3s;
-    box-shadow:
-      0 10px 27px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
   }
 
   .navbar_container.disabled {
