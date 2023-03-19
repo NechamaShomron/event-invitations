@@ -6,9 +6,13 @@ import emailjs from '@emailjs/browser';
 
 
 const ContactForm = () => {
-    const [name, setName] = useState('');
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+
     const [email, setEmail] = useState('');
-    const [message, setMessgae] = useState('');
+    const [phone, setPhone] = useState('');
+
+    const [message, setMessage] = useState('');
     const [error, setError] = useState(false);
     const [success, setSuccess] = useState(false);
 
@@ -44,9 +48,11 @@ const ContactForm = () => {
     }
 
     const cleanFields = () => {
-        setName('');
-        setMessgae('');
+        setFirstName('');
+        setLastName('');
+        setPhone('');
         setEmail('');
+        setMessage('');
         setFormStatus('שלח');
         setSuccess(false);
     }
@@ -61,7 +67,7 @@ const ContactForm = () => {
                                 <div className="row no-gutters">
                                     <div className="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch">
                                         <div className="contact-wrap w-100 p-md-5 p-4">
-                                            <h3 className="mb-4">צור קשר</h3>
+                                            <h3 >צור קשר</h3>
                                             {error && <div className="mb-4">
                                                 <span className={styles.form_message_warning}>
                                                     אירעה שגיאה. אנא נסה שנית מאוחר יותר.
@@ -73,21 +79,33 @@ const ContactForm = () => {
                                             <form onSubmit={onSubmit} ref={form} >
                                                 <div className="row">
                                                     <div className="col-md-6">
-                                                        <div>
-                                                            <label className="label" htmlFor="name">שם מלא</label>
-                                                            <input type="text" className="form-control" name="to_name" id="name" value={name} onChange={e => setName(e.target.value)} placeholder="שם מלא" onInput={e => e.target.setCustomValidity('')} title='' onInvalid={e => e.target.setCustomValidity('אנא מלא שדה זה')} required />
+                                                        <div  className={styles.form_input}>
+                                                            <label className="label" htmlFor="firstName">שם פרטי</label>
+                                                            <input type="text" className="form-control" name="to_name" id="firstName" value={firstName} onChange={e => setFirstName(e.target.value)} placeholder="שם פרטי" onInput={e => e.target.setCustomValidity('')} title='' onInvalid={e => e.target.setCustomValidity('אנא מלא שדה זה')} required />
                                                         </div>
                                                     </div>
                                                     <div className="col-md-6">
-                                                        <div>
+                                                        <div  className={styles.form_input}>
+                                                            <label className="label" htmlFor="lastName">שם משפחה</label>
+                                                            <input type="text" className="form-control" name="to_name" id="lastName" value={lastName} onChange={e => setLastName(e.target.value)} placeholder="שם משפחה" onInput={e => e.target.setCustomValidity('')} title='' onInvalid={e => e.target.setCustomValidity('אנא מלא שדה זה')} required />
+                                                        </div>
+                                                    </div>
+                                                    <div className="col-md-6">
+                                                        <div className={styles.form_input}>
+                                                            <label className="label" htmlFor="phone">טלפון</label>
+                                                            <input type="number" className="form-control" name="phone" id="phone" value={phone} onChange={e => { setPhone(e.target.value); e.target.setCustomValidity('') }} placeholder="טלפון" title=''  onInput={e => e.target.setCustomValidity('')}  onInvalid={e => e.target.setCustomValidity('אנא מלא שדה זה')} required />
+                                                        </div>
+                                                    </div>
+                                                    <div className="col-md-6">
+                                                        <div  className={styles.form_input}> 
                                                             <label className="label" htmlFor="email">אימייל</label>
-                                                            <input type="email" className="form-control" name="reply_to" id="email" value={email} onChange={e => { setEmail(e.target.value); debugger; e.target.setCustomValidity('') }} placeholder="אימייל" title='' onInput={e => e.target.setCustomValidity('')} onInvalid={e => checkEmailValidity(e.target)} required />
+                                                            <input type="email" className="form-control" name="reply_to" id="email" value={email} onChange={e => { setEmail(e.target.value); e.target.setCustomValidity('') }} placeholder="אימייל" title='' onInput={e => e.target.setCustomValidity('')} onInvalid={e => checkEmailValidity(e.target)} required />
                                                         </div>
                                                     </div>
                                                     <div className="col-md-12">
-                                                        <div className={styles.form_message}>
+                                                        <div className={styles.form_input}>
                                                             <label className="label" htmlFor="message">הודעה</label>
-                                                            <textarea name="message" className="form-control" id="message" cols="30" rows="4" value={message} style={{ resize: 'none' }} onChange={e => setMessgae(e.target.value)} placeholder="הודעה" title='' onInput={e => e.target.setCustomValidity('')} onInvalid={e => e.target.setCustomValidity('אנא מלא שדה זה')} required></textarea>
+                                                            <textarea name="message" className="form-control" id="message" cols="30" rows="4" value={message} style={{ resize: 'none' }} onChange={e => setMessage(e.target.value)} placeholder="הודעה" title='' onInput={e => e.target.setCustomValidity('')} onInvalid={e => e.target.setCustomValidity('אנא מלא שדה זה')} required></textarea>
                                                         </div>
                                                     </div>
                                                     <div className="col-md-12">

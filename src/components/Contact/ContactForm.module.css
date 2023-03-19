@@ -1,21 +1,19 @@
 .page_container {
-    direction: rtl;
     padding: 2rem 5rem;
+    overflow: auto;
+    height: 100vh;
 }
 
 .contact_conatiner {
+    direction: rtl;
     padding: 7em 0;
-
 }
 
 .container {
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
     box-shadow: 0 11px 27px rgb(0 0 0 / 5%);
-
 }
 
 @media (min-width: 576px) {
@@ -47,12 +45,12 @@
     color: var(--blue-text-bg);
 }
 
-.form_message {
+.form_input {
     padding-top: 2em;
 }
 
 label {
-    margin-right: 3px;
+    margin-right: 10px;
 }
 
 .form_bttn_container {
