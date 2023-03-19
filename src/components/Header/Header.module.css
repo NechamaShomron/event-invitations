@@ -27,8 +27,13 @@ header {
 }
 
 .logo_icon {
+    color: black;
     padding-right: 5px;
     margin-top: -4px;
+}
+
+.logo_title {
+    color: black;
 }
 
 @media (max-width: 680px) {

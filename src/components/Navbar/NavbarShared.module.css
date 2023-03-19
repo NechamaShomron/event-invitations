@@ -80,6 +80,7 @@ button span {
   }
 
   .navbar_container {
+    padding-left: 0;
     position: fixed;
     top: 3rem;
     flex-direction: column-reverse;
@@ -107,6 +108,7 @@ button span {
   .navbar_items {
     position: relative;
     font-size: 14px;
+    width: 100%;
   }
 
   .navbar_items a {
@@ -114,6 +116,7 @@ button span {
     font-size: inherit;
     color: inherit;
     text-decoration: none;
+    width: 100%;
   }
 
   .navbar_items button {
@@ -125,6 +128,7 @@ button span {
     background-color: transparent;
     cursor: pointer;
     width: 100%;
+    justify-content: center;
   }
 
   button span {
@@ -132,8 +136,8 @@ button span {
   }
 
   .navbar_items>a, .navbar_items button {
-    text-align: left;
-    padding: 0.7rem 1rem;
+    text-align: center;
+    width: 100%;
   }
 
 

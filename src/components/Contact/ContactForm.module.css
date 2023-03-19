@@ -81,17 +81,19 @@ label {
     color: red;
 }
 
-.form_message_success{
+.form_message_success {
     color: #28a745;
     font-size: 18px;
-    font-weight: bold; 
+    font-weight: bold;
 }
 
-a {
+.contact_details {
     text-decoration: none;
+    background-color: var(--blue-dark);
+    color: var(--blue-text-bg);
 }
 
-a:hover {
+.contact_details:hover {
     color: white;
     font-weight: bold;
 }

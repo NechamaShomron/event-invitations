@@ -87,7 +87,7 @@ const ContactForm = () => {
                                                     <div className="col-md-12">
                                                         <div className={styles.form_message}>
                                                             <label className="label" htmlFor="message">הודעה</label>
-                                                            <textarea name="message" className="form-control" id="message" cols="30" rows="4" value={message} style={{resize: 'none'}} onChange={e => setMessgae(e.target.value)} placeholder="הודעה" title='' onInput={e => e.target.setCustomValidity('')} onInvalid={e => e.target.setCustomValidity('אנא מלא שדה זה')} required></textarea>
+                                                            <textarea name="message" className="form-control" id="message" cols="30" rows="4" value={message} style={{ resize: 'none' }} onChange={e => setMessgae(e.target.value)} placeholder="הודעה" title='' onInput={e => e.target.setCustomValidity('')} onInvalid={e => e.target.setCustomValidity('אנא מלא שדה זה')} required></textarea>
                                                         </div>
                                                     </div>
                                                     <div className="col-md-12">
@@ -115,7 +115,7 @@ const ContactForm = () => {
                                                         <span className="fa fa-phone"></span>
                                                     </div>
                                                     <div className="text pl-3">
-                                                        <p><span>טלפון:</span> <a className={styles.side_letter} href="tel://0505930108">050-593-0108</a></p>
+                                                        <p><span>טלפון:</span> <a className={styles.contact_details} href="tel://0505930108">050-593-0108</a></p>
                                                     </div>
                                                 </div>
                                                 <div className="dbox w-100 d-flex align-items-center">
@@ -123,7 +123,7 @@ const ContactForm = () => {
                                                         <span className="fa fa-paper-plane"></span>
                                                     </div>
                                                     <div className="text pl-3">
-                                                        <p><span>אימייל:</span> <a className={styles.side_letter} href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+                                                        <p><span>אימייל:</span> <a className={styles.contact_details} href="mailto:info@yoursite.com">info@yoursite.com</a></p>
                                                     </div>
                                                 </div>
                                             </div>
